@@ -441,7 +441,6 @@ header a:hover {
 	height: 30px;
 	width: 100px;
 	padding: 20px 10px 10px 20px;
-    border-bottom: 4px solid #e5e5e5;
     position: relative;
 }
 
@@ -553,7 +552,6 @@ figure:hover figcaption {
 #projets img {
     box-sizing: border-box;
     max-width: 400px;
-    max-height: auto;
     /* margin: 10px 10px 10px 10px; */
 }
 
