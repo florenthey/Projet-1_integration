@@ -61,6 +61,18 @@ hr {
     text-align: center;
 }
 
+#button-style {
+    background-color: #5cacd2;
+    border: none;
+	border-radius: 4px;
+	border-bottom: 3px solid #4493ba;
+    padding: 10px 15px 10px 15px;
+    color: white;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
+
 /* MOBILE VERSION */
 @media screen and (max-width: 450px) {
 
@@ -80,6 +92,7 @@ header {
     padding: 1.5% 10% 1.5% 10%;
     box-sizing: border-box;
     width: 100%;
+    height: 150px;
     position: fixed;
     z-index: 1;
 }
@@ -124,7 +137,7 @@ header a:hover {
 }
 
 /* MOBILE VERSION */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
 
     header {
         display: flex;
@@ -138,7 +151,7 @@ header a:hover {
     }
 
     header li {
-        margin: 15px;
+        margin: 10px;
         flex-direction: row;
     }
 
@@ -156,8 +169,9 @@ header a:hover {
     padding-top: 150px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 100px;
     background-color: #fdfdfd;
+    width: 100%;
+    /* margin-bottom: 4.5em; */
 }
 
 #slider img {
@@ -173,7 +187,7 @@ header a:hover {
 
 #button-right {
 	position: absolute;
-	top: 50%;
+	margin-top: 14%;
 	right: 0;
 	width: 35px;
 	height: 70px;
@@ -185,7 +199,7 @@ header a:hover {
 
 #button-left {
 	position: absolute;
-	top: 50%;
+	margin-top: 14%;
 	left: 0;
 	width: 35px;
 	height: 70px;
@@ -197,14 +211,14 @@ header a:hover {
 
 .fa-angle-left {
 	color: white;
-	padding-top: 20px;
-	padding-left: 8px;
+	margin-top: 20px;
+	margin-left: 8px;
 }
 
 .fa-angle-right {
 	color: white;
-	padding-top: 20px;
-	padding-left: 15px;
+	margin-top: 20px;
+	margin-left: 15px;
 }
 
 /* Problème, les boutons gauche et droite restent collés au même endroit et ne suivent pas le redimensionnement de la fenêtre...
@@ -225,7 +239,7 @@ header a:hover {
 
 #slider-content-slogan {
     font-size: 0.9em;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     color: white;
 }
 
@@ -267,17 +281,16 @@ header a:hover {
     }
 }
 
-
 /* SERVICES */
 #services {
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 .text-hook {
     font-family: "Robotomedium", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 #services-content {
@@ -315,6 +328,7 @@ header a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 20px;
 }
 
 .services-row-pictos {
@@ -351,12 +365,14 @@ header a:hover {
 
 .services-row-text h3 {
     line-height: 5px;
+    margin: 0;
+    color: black;
 }
 
 @media screen and (max-width: 1000px) {
 
     #services {
-        padding-top: 250px;
+        padding-top: 150px;
     }
 
     #services-image {
@@ -368,10 +384,6 @@ header a:hover {
         margin-left: 50px;
     }
 
-    .services-row {
-        margin: 10px;
-    }
-
     .services-row-text{
         margin-top: 20px;
     }
@@ -381,7 +393,7 @@ header a:hover {
 @media screen and (max-width: 450px) {
 
     #services {
-        padding-top: 250px;
+        padding-top: 50px;
     }
 
     #services-image img {
@@ -396,11 +408,10 @@ header a:hover {
     .services-row {
         display: flex;
         flex-direction: column;
-        margin: 0;
     }
     
     .services-row-text{
-        margin-bottom: 15px;
+        padding-top: 70px;
     }
 
     .services-row-pictos {
@@ -415,10 +426,16 @@ header a:hover {
     }
 }
 
+
 /* PROJETS */
 
-#projet {
-    margin-bottom: 100px;
+#projets {
+    padding-bottom: 5px;
+    background-color: #f5f5f5;
+}
+
+.section-header {
+    padding-top: 8.5em;
 }
 
 #projets nav {
@@ -428,6 +445,7 @@ header a:hover {
 	background-color: transparent;
 	width: 468px;
     height: auto;
+    padding-bottom: 50px;
 }
 
 #projets ul {
@@ -442,11 +460,20 @@ header a:hover {
 	width: 100px;
 	padding: 20px 10px 10px 20px;
     position: relative;
+    border-bottom: 3px solid #e5e5e5;
+}
+
+#work {
+    border-radius: 5px 0 0 5px;
+}
+
+#portfolio {
+    border-radius: 0 5px 5px 0;
 }
 
 #projets li:hover, #projets li:active, #projets .active {
 	background-color: #5cacd2;
-	border-bottom: 3px solid #468bac;
+    border-bottom: 3px solid #468bac;
 }
 
 #projets a:hover, #projets .active a {
@@ -471,7 +498,7 @@ header a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 #projets-row-one {
@@ -479,13 +506,15 @@ header a:hover {
 	justify-content: center;
 	align-content: space-between;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 #projets-row-two {
 	display: flex;
 	justify-content: center;
 	align-content: space-between;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .cell-one {
@@ -500,7 +529,7 @@ header a:hover {
 
 
 figure {
-    max-height: 400px;
+    max-height: 350px;
     position: relative;
 }
 
@@ -510,8 +539,9 @@ figcaption {
     color: white;
     position: absolute;
     bottom: 0px;
-    visibility: hidden;
-    width: 400px;
+    opacity: 0;
+    transition: all 0.7s ease;
+    width: 350px;
 }
 
 .figcaption-text {
@@ -546,23 +576,29 @@ figcaption p, h3 {
 }
 
 figure:hover figcaption {
-    visibility: visible;
+    opacity: 1;
 }
 
 #projets img {
     box-sizing: border-box;
-    max-width: 400px;
+    max-width: 350px;
     /* margin: 10px 10px 10px 10px; */
 }
 
 .fa-eye {
 	top: -5px;
-    right: 30px;
+    left: 288px;
     font-size: 15px;
+    color: white;
 }
 
 /* MOBILE VERSION */
 @media screen and (max-width: 450px) {
+
+    #portfolio-anchor {
+        padding-top:
+        6.5em;
+    }
 
     #projets nav {
         width: 100%;
@@ -589,7 +625,7 @@ figure:hover figcaption {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 100px;
+        padding-bottom: 100px;
     }
     
     #projets-row-one {
@@ -627,19 +663,31 @@ figure:hover figcaption {
 
 #map {
     width: 100%;
-    border: 2px solid blue;
+}
+
+#map-filter {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 605px;
+    background-color:
+    #5CADD3;
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 #form-container {
+    z-index: 2;
     box-sizing: border-box ;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background: rgba(235, 241, 241, 0.9); 
-    width: 350px;
-    height: 80%;
-	top: 50px;
+    width: 400px;
+    height: 90%;
+	top: 30px;
     right: 150px;
     padding: 20px;
 }
@@ -677,7 +725,7 @@ input {
     border: 1px solid grey;
     border-radius: 3px;
     width: 100%;
-    max-width: 290px;
+    max-width: 350px;
 }
 
 textarea {
@@ -690,29 +738,17 @@ textarea {
     border-radius: 3px;
     width: 100%;
     height: 150px;
-    max-width: 300px;
-    max-height: 150px;
-    max-height: 100px;
+    max-width: 350px;
+    max-height: 170px;
+    padding: 8px 0px 8px 8px;
 }
 
-#submit-button {
-    background-color: #5cacd2;
-    border: none;
-	border-radius: 4px;
-	border-bottom: 3px solid #4493ba;
-    padding: 10px 15px 10px 15px;
-    color: white;
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-}
-
-#submit-button a {
+/* #submit-button a {
 	text-decoration: none;
 	color: white;
 	font-size: 1.2em;
     font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
+} */
 
 #underline {
     border-bottom: 1px dotted black;
@@ -722,6 +758,10 @@ textarea {
 
     #map {
         display: none;
+    }
+
+    #map-filter {
+        visibility: hidden;
     }
 
     #form-container {
