@@ -61,7 +61,7 @@ hr {
     text-align: center;
 }
 
-#button-style {
+.button-style {
     background-color: #5cacd2;
     border: none;
 	border-radius: 4px;
@@ -95,6 +95,7 @@ header {
     height: 150px;
     position: fixed;
     z-index: 1;
+    top: 0;
 }
 
 header img {
@@ -171,7 +172,6 @@ header a:hover {
     overflow: hidden;
     background-color: #fdfdfd;
     width: 100%;
-    /* margin-bottom: 4.5em; */
 }
 
 #slider img {
@@ -187,42 +187,44 @@ header a:hover {
 
 #button-right {
 	position: absolute;
-	margin-top: 14%;
-	right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
 	width: 35px;
 	height: 70px;
 	background-color: rgba(0,0,0,0.2);
 	border-bottom-left-radius: 70px;
 	border-top-left-radius: 70px;
-	font-size: 30px;
+    font-size: 30px;
+    border: 0;
 }
 
+/* marche pas */
 #button-left {
 	position: absolute;
-	margin-top: 14%;
-	left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 	width: 35px;
-	height: 70px;
+    height: 70px;
+    left: 0;
 	background-color: rgba(0,0,0,0.2);
 	border-bottom-right-radius: 70px;
 	border-top-right-radius: 70px;
-	font-size: 30px;
+    font-size: 30px;
+    border: 0;
 }
 
 .fa-angle-left {
 	color: white;
-	margin-top: 20px;
-	margin-left: 8px;
+	margin-top: 0px;
+	margin-left: 7px;
 }
 
 .fa-angle-right {
 	color: white;
-	margin-top: 20px;
-	margin-left: 15px;
+	margin-top: 0px;
+	margin-left: 7px;
 }
-
-/* Problème, les boutons gauche et droite restent collés au même endroit et ne suivent pas le redimensionnement de la fenêtre...
-*/
 
 #slider-content {
     position: absolute;
@@ -438,7 +440,7 @@ header a:hover {
     padding-top: 8.5em;
 }
 
-#projets nav {
+/* #projets nav {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 10px 0 10px;
@@ -446,7 +448,7 @@ header a:hover {
 	width: 468px;
     height: auto;
     padding-bottom: 50px;
-}
+} */
 
 #projets ul {
     display: flex;
@@ -600,10 +602,10 @@ figure:hover figcaption {
         6.5em;
     }
 
-    #projets nav {
+    /* #projets nav {
         width: 100%;
         padding: 0;
-    }
+    } */
     
     #projets ul {
         display: flex;
@@ -739,7 +741,7 @@ textarea {
     width: 100%;
     height: 150px;
     max-width: 350px;
-    max-height: 170px;
+    max-height: 150px;
     padding: 8px 0px 8px 8px;
 }
 

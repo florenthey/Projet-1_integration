@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -35,10 +35,8 @@
             <div id="slider-images">
                 <img src="assets/slider/bg1.jpg" alt="Une petite fille souriante, les mains pleines de peinture">
                 <!-- <img src="assets/slider/bg2.jpg" alt="Un petit garçon criant dans un mégaphone"> -->
-            </div>
-            <div id="slider-buttons">
-                <a href="#" id="button-right"><i class="fas fa-angle-right"></i></a>
-                <a href="#" id="button-left"><i class="fa fa-angle-left"></i></a>
+                <button href="#" id="button-right"><i class="fas fa-angle-right"></i></button>
+                <button href="#" id="button-left"><i class="fa fa-angle-left"></i></button>
             </div>
             <div id="slider-content">
                     <h1>
@@ -46,7 +44,7 @@
                         : L'AGENCE DE TOUS <br />VOS PROJETS !</h1>
                     <p id="slider-content-slogan">Vous avez un projet web ? La WebAgency vous aide à le réaliser!</p>
                     <!-- <p id="button-info"><a href="#services" title="Recevoir plus d'informations">Plus d'infos</a></p> -->
-                    <input type="button" value="Plus d'infos" id="button-style">
+                    <a href="#services" title="Aller à la section Services" class="button-style">Plus d'infos</a>
             </div>
             <div id="slider-bottom-bar">
                 <div id="slider-progress">
@@ -120,14 +118,14 @@
                     </p>
         </section>
 
-        <nav>
-            <ul>
-                <li id="work"><a href="#work-page" title="Tout les travaux">All Works</a></li>
-                <li id="creative"><a href="#creative-page" title="Créations originales">Creative</a></li>
-                <li id="corporate"><a href="#corporate-page" title="#Commandes d'entreprises">Corporate</a></li>
-                <li id="portfolio"><a href="#portfolio-page" title="Portfolio">Portfolio</a></li>
-            </ul>
-        </nav>
+       
+        <ul>
+            <li id="work"><a href="#work-page" title="Tout les travaux">All Works</a></li>
+            <li id="creative"><a href="#creative-page" title="Créations originales">Creative</a></li>
+            <li id="corporate"><a href="#corporate-page" title="#Commandes d'entreprises">Corporate</a></li>
+            <li id="portfolio"><a href="#portfolio-page" title="Portfolio">Portfolio</a></li>
+        </ul>
+        
 
         <section id="projets-grid">
 
@@ -153,7 +151,7 @@
                                 <a title="project-two" href="#project-two">
                                     <div class="figcaption-text">
                                         <h3>Happyness Officier Agency</h3>
-                                        <p>Refonte de l'identité visuelle et site web</p>
+                                        <p>Refonte de l'identité visuelle</p>
                                     </div>
                                     <span class="fa fa-eye"></span>
                                 </a>
@@ -278,7 +276,7 @@
                     <input type="email" name="email" placeholder="Email"> <br>
                     <input type="text" name="subject" placeholder="Subject"> <br>
                     <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea> <br>
-                    <input type="submit" value="Send message" id="button-style">
+                    <input type="submit" value="Send message" class="button-style">
                 </form>
             </div>
             
