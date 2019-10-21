@@ -217,7 +217,7 @@ header a:hover {
 .fa-angle-left {
 	color: white;
 	margin-top: 0px;
-	margin-left: 7px;
+	margin-left: -7px;
 }
 
 .fa-angle-right {
@@ -278,7 +278,31 @@ header a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-    #slider {
+
+    #slider-images {
+        display: none;
+    }
+
+    #slider-bottom-bar {
+        display: none;
+    }
+
+    #slider-content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 150px 50px 0px 0px;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    #slider-content h1, #slider-content p {
+        color: black;
+        margin: 5px;
+    }
+
+    #slider-content a {
         display: none;
     }
 }
@@ -433,6 +457,7 @@ header a:hover {
 
 #projets {
     padding-bottom: 5px;
+    margin-bottom:150px;
     background-color: #f5f5f5;
 }
 
@@ -440,57 +465,44 @@ header a:hover {
     padding-top: 8.5em;
 }
 
-/* #projets nav {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0 10px 0 10px;
-	background-color: transparent;
-	width: 468px;
-    height: auto;
-    padding-bottom: 50px;
-} */
-
 #projets ul {
     display: flex;
     justify-content: center;
 }
 
-#projets li {
-    display: block;
-	background-color: #e5e5e5;
-	height: 30px;
-	width: 100px;
-	padding: 20px 10px 10px 20px;
-    position: relative;
+#projets button {
+    background-color: #e5e5e5;;
+	color: grey;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+    height: 50px;
+    width: 100px;
     border-bottom: 3px solid #e5e5e5;
 }
 
-#work {
-    border-radius: 5px 0 0 5px;
-}
-
-#portfolio {
-    border-radius: 0 5px 5px 0;
-}
-
-#projets li:hover, #projets li:active, #projets .active {
-	background-color: #5cacd2;
+#projets button:hover {
+    color: white;
+    background: #5cacd2;
+    height: 50px;
+    width: 100px;
     border-bottom: 3px solid #468bac;
 }
 
-#projets a:hover, #projets .active a {
-	color: white;
-	border: none;
+.work {
+    border-radius: 5px 0 0 5px;
+}
+
+.portfolio {
+    border-radius: 0 5px 5px 0;
 }
 
 /* flèche en bas du bouton */
 #projets li:hover::before, #projets li:active::before, #projets .active::before {
 	content: "";
 	position: absolute;
-	top: 62px;
-	left: 50px;	
-	width: 0;
-	height: 0;
+    margin-top: 50px;
+    margin-left: 42px;
 	border-style: solid;
 	border-width: 8px 8px 0 8px;
 	border-color: #468bac transparent transparent transparent;
@@ -531,7 +543,7 @@ header a:hover {
 
 
 figure {
-    max-height: 350px;
+    max-height: 270px;
     position: relative;
 }
 
@@ -543,7 +555,7 @@ figcaption {
     bottom: 0px;
     opacity: 0;
     transition: all 0.7s ease;
-    width: 350px;
+    width: 270px;
 }
 
 .figcaption-text {
@@ -555,9 +567,11 @@ figcaption .fa-eye {
 }
 
 .fa-eye {
-	position: absolute;
+    position: absolute;
 	top: -5px;
-	left: 338px;
+    left: 208px;
+    font-size: 15px;
+    color: white;
 }
 
 figcaption::before {
@@ -574,7 +588,7 @@ figcaption::before {
 
 figcaption p, h3 {
     color: white;
-    margin: 20px 20px;
+    margin: 10px 10px;
 }
 
 figure:hover figcaption {
@@ -583,43 +597,31 @@ figure:hover figcaption {
 
 #projets img {
     box-sizing: border-box;
-    max-width: 350px;
+    max-width: 270px;
     /* margin: 10px 10px 10px 10px; */
-}
-
-.fa-eye {
-	top: -5px;
-    left: 288px;
-    font-size: 15px;
-    color: white;
 }
 
 /* MOBILE VERSION */
 @media screen and (max-width: 450px) {
 
-    #portfolio-anchor {
-        padding-top:
-        6.5em;
-    }
-
-    /* #projets nav {
-        width: 100%;
-        padding: 0;
-    } */
-    
     #projets ul {
         display: flex;
         flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 
     #projets li {
-        width: 80%;
         text-align: center;
         margin: 5px;
     }
 
     #projets li:hover::before, #projets li:active::before, #projets .active::before {
         display: none;
+    }
+
+    .work, .creative, .corporate, .portfolio {
+        border-radius: 5px;
     }
 
 
@@ -665,6 +667,10 @@ figure:hover figcaption {
 
 #map {
     width: 100%;
+}
+
+iframe {
+    border: 0;
 }
 
 #map-filter {
