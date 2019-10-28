@@ -18,15 +18,22 @@
 
         <!-- NAVBAR -->
         <header>
-            <img src="assets/logo.png" alt="Logo de l'entreprise Web Agency">
-            <nav>
-                <ul>
-                    <li><a href="#slider" title="Retourner à l'accueil de la page">Accueil</a></li>
-                    <li><a href="#services" title="Aller à la section Services">Services</a></li>
-                    <li><a href="#projets" title="Aller à la section Portfolio">Portfolio</a></li>
-                    <li><a href="#contact" title="Aller à la section Contact">Contact</a></li>
-                </ul>
-            </nav>              
+            
+                <img src="assets/logo.png" alt="Logo de l'entreprise Web Agency">
+                <button class="hamburger-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+          
+            <div>
+                <nav id="navbar">
+                    <ul id="ul-list" onclick="closedAfterClick()">
+                        <li><a href="#slider" title="Retourner à l'accueil de la page">Accueil</a></li>
+                        <li><a href="#services" title="Aller à la section Services">Services</a></li>
+                        <li><a href="#projets" title="Aller à la section Portfolio">Portfolio</a></li>
+                        <li><a href="#contact" title="Aller à la section Contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>          
         </header>
 
 
@@ -35,8 +42,8 @@
             <div id="slider-images">
                 <img src="assets/slider/bg1.jpg" alt="Une petite fille souriante, les mains pleines de peinture">
                 <!-- <img src="assets/slider/bg2.jpg" alt="Un petit garçon criant dans un mégaphone"> -->
-                <button href="#" id="button-right"><i class="fas fa-angle-right"></i></button>
-                <button href="#" id="button-left"><i class="fa fa-angle-left"></i></button>
+                <button id="button-right"><i class="fas fa-angle-right"></i></button>
+                <button id="button-left"><i class="fa fa-angle-left"></i></button>
             </div>
             <div id="slider-content">
                     <h1>
@@ -116,15 +123,13 @@
                     </p>
         </section>
 
-       
         <ul>
-            <li><button type="button" class="work">All Works</button></li>
-            <li><button type="button" class="creative">Creative</button></li>
-            <li><button type="button" class="corporate">Corporate</button></li>
-            <li><button type="button" class="portfolio">Portfolio</button></li>
+            <li><button class="btn-tab" id="work" >All Works</button></li>
+            <li><button class="btn-tab">Creative</button></li>
+            <li><button class="btn-tab">Corporate</button></li>
+            <li><button class="btn-tab" id="portfolio" >Portfolio</button></li>
         </ul>
         
-
         <section id="projets-grid">
 
             <div id="projets-row-one">
@@ -263,9 +268,12 @@
 
             <div id="form-info">
                 <h2>Contact info</h2>
-                <p> <span id="title-agency">WebAgency SAS</span>
-                <br> 25 rue d'Hauteville 75010 Paris 
-                <br> <span id="underline">Tel: </span> 01 02 03 04 05 </p>
+                <address>
+                    <span id="title-agency">WebAgency SAS</span>
+                    <br> 25 rue d'Hauteville 75010 Paris
+                    <br> <span id="underline">Tel:</span>
+                    <a href="tel:+0102030405">(33) 6 02 03 04 05</a>
+                  </address>
             </div>  
 
             <div id="form-input">
@@ -281,6 +289,21 @@
         </div>
 
     </div>
+
+    <script>
+
+        const nav = document.getElementById("navbar");
+        const ul = document.getElementById('ul-list');
+
+        const toggleMenu = () => nav.style.display === "flex" ? nav.style.display = "none" : nav.style.display = "flex";
+
+        const atResizing = () => (window.innerWidth >= 1000) ? nav.style.display = "flex" : nav.style.display = "none";
+
+        const closedAfterClick = () => nav.style.display = "none";
+
+        window.onresize = atResizing;
+
+    </script>
 
 </body>
 

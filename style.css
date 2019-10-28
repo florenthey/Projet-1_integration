@@ -88,12 +88,11 @@ header {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 1.5% 10% 1.5% 10%;
     box-sizing: border-box;
     width: 100%;
-    height: 150px;
+    height: 100px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -116,7 +115,7 @@ header li {
 header a {
     color: grey;
     text-align:center;
-    padding-top: 65px;
+    padding-top: 50%;
 }
 
 header a:hover {
@@ -124,18 +123,20 @@ header a:hover {
     border-top: 3px solid #5cacd2;
 }
 
-@media screen and (max-width: 1000px) {
+.hamburger-icon {
+    display: none;
+    color: grey;
+    font-size: 2rem;
+}
 
-    header {
-        flex-direction: column;
-        box-shadow: 5px 1px 5px grey;
-    }
-
-    header a {
-        color: grey;
-        text-align:center;
-        padding-top: 5px;
-    }
+header button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 /* MOBILE VERSION */
@@ -143,18 +144,34 @@ header a:hover {
 
     header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
     }
 
     header ul {
-        display: flex;
         flex-direction: column;
+        width: 100%;
+        background: #333;
     }
 
     header li {
-        margin: 10px;
+        margin: 15px;
         flex-direction: row;
+    }
+
+    header li:hover {
+        background: #5cacd2;
+        width: 100%;
+    }
+
+    header a {
+        color: grey;
+        text-align:center;
+        padding-top: 5px;
+    }
+    header a:hover {
+        border-top: none;
+        color: white;
     }
 
     header img {
@@ -162,13 +179,40 @@ header a:hover {
         max-width: 50%;
         max-height: 50%;
     }
-}
 
+    .hamburger-icon {
+        display: flex;
+        color: grey;
+        font-size: 2rem;
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 22px;
+    }
+
+    .hamburger-icon:hover {
+        color: #5cacd2;
+    }
+
+    #navbar {
+        display: none;
+        position: fixed;
+        justify-content: space-around;
+        width: 100%;
+        left: 0;
+    }
+
+    .nav-images {
+        display: flex;
+        align-content: space-around;
+    }
+
+}
 
 /* SLIDER */
 #slider {
     display: flex;
-    padding-top: 150px;
+    padding-top: 100px;
     position: relative;
     overflow: hidden;
     background-color: #fdfdfd;
@@ -200,7 +244,6 @@ header a:hover {
     border: 0;
 }
 
-/* marche pas */
 #button-left {
 	position: absolute;
     top: 50%;
@@ -324,20 +367,17 @@ header a:hover {
 
 #services-content {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
 }
 
 #services-image {
-    width: 50%; 
     box-sizing: border-box;
 }
 
 #services-image img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 510px;
     height: 319px;
 }
@@ -345,12 +385,8 @@ header a:hover {
 #services-paragraph {
     display: flex;
     flex-direction: column;
-    width: 50%;
     box-sizing: border-box;
     margin-top: 50px;
-    /* margin-left: 100px;
-    margin-top: 80px;
-    margin-bottom: 100px; */
 }
 
 .services-row {
@@ -493,11 +529,11 @@ header a:hover {
     border-bottom: 3px solid #468bac;
 }
 
-.work {
+#work {
     border-radius: 5px 0 0 5px;
 }
 
-.portfolio {
+#portfolio {
     border-radius: 0 5px 5px 0;
 }
 
@@ -549,6 +585,7 @@ header a:hover {
 figure {
     max-height: 270px;
     position: relative;
+    margin: 15px;
 }
 
 figcaption {
@@ -602,7 +639,6 @@ figure:hover figcaption {
 #projets img {
     box-sizing: border-box;
     max-width: 270px;
-    /* margin: 10px 10px 10px 10px; */
 }
 
 /* MOBILE VERSION */
@@ -709,18 +745,16 @@ iframe {
     width: 100%;
 }
 
-#contact p {
-    line-height: 20px;
-    font-size: 1em;
-    margin-top: 15px;
-}
-
 #contact h2 {
     text-align: left;
     font-size: 1.5em;
     margin: 0;
     padding: 0;
     line-height: 20px;
+}
+
+address {
+    margin: 15px 0 15px 0;
 }
 
 #title-agency {
@@ -784,5 +818,9 @@ textarea {
         align-items: flex-start;
         background: rgba(235, 241, 241, 0.9); 
         width: 100%;
+    }
+
+    #contact {
+        margin: 15px 5px 25px;
     }
 }
