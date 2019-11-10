@@ -13,52 +13,45 @@
 
 <body>
 
-    <!-- HEADER -->
-    <div id="container">
-
-        <!-- NAVBAR -->
-        <header>
+    <!-- NAVBAR -->
+    <header>
             
-                <img src="assets/logo.png" alt="Logo de l'entreprise Web Agency">
-                <button class="hamburger-icon" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
+        <img src="assets/logo.png" alt="Logo de l'entreprise Web Agency">
+            <button class="hamburger-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
           
-            <div>
-                <nav id="navbar">
-                    <ul id="ul-list" onclick="closedAfterClick()">
-                        <li><a href="#slider" title="Retourner à l'accueil de la page">Accueil</a></li>
-                        <li><a href="#services" title="Aller à la section Services">Services</a></li>
-                        <li><a href="#projets" title="Aller à la section Portfolio">Portfolio</a></li>
-                        <li><a href="#contact" title="Aller à la section Contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>          
-        </header>
+            <nav id="navbar">
+                <ul id="ul-list" onclick="closedAfterClick()">
+                    <li><a href="#slider" title="Retourner à l'accueil de la page">Accueil</a></li>
+                    <li><a href="#services" title="Aller à la section Services">Services</a></li>
+                    <li><a href="#projets" title="Aller à la section Portfolio">Portfolio</a></li>
+                    <li><a href="#contact" title="Aller à la section Contact">Contact</a></li>
+                </ul>
+            </nav>
+                   
+    </header>
 
 
-        <!-- SLIDER -->
-        <div id="slider">
-            <div id="slider-images">
-                <img src="assets/slider/bg1.jpg" alt="Une petite fille souriante, les mains pleines de peinture">
-                <!-- <img src="assets/slider/bg2.jpg" alt="Un petit garçon criant dans un mégaphone"> -->
-                <button id="button-right"><i class="fas fa-angle-right"></i></button>
-                <button id="button-left"><i class="fa fa-angle-left"></i></button>
-            </div>
-            <div id="slider-content">
-                    <h1>
-                        <span id="slider-content-title-blue">WEBAGENCY</span>
-                        : L'AGENCE DE TOUS <br />VOS PROJETS !</h1>
-                    <p id="slider-content-slogan">Vous avez un projet web ? La WebAgency vous aide à le réaliser!</p>
-                    <!-- <p id="button-info"><a href="#services" title="Recevoir plus d'informations">Plus d'infos</a></p> -->
-                    <a href="#services" title="Aller à la section Services" class="button-style">Plus d'infos</a>
-            </div>
-            <div id="slider-bottom-bar">
-                <div id="slider-progress">
-                </div>
+    <!-- SLIDER -->
+    <div id="slider">
+        <div id="slider-images">
+            <img src="assets/slider/bg1.jpg" alt="Une petite fille souriante, les mains pleines de peinture">
+            <!-- <img src="assets/slider/bg2.jpg" alt="Un petit garçon criant dans un mégaphone"> -->
+            <button id="button-right"><i class="fas fa-angle-right"></i></button>
+            <button id="button-left"><i class="fa fa-angle-left"></i></button>
+        </div>
+        <div id="slider-content">
+            <h1>
+                <span id="slider-content-title-blue">WEBAGENCY</span>: L'AGENCE DE TOUS <br />VOS PROJETS !</h1>
+                <p id="slider-content-slogan">Vous avez un projet web ? La WebAgency vous aide à le réaliser!</p>
+                <!-- <p id="button-info"><a href="#services" title="Recevoir plus d'informations">Plus d'infos</a></p> -->
+                <a href="#services" title="Aller à la section Services" class="button-style">Plus d'infos</a>
+        </div>
+        <div id="slider-bottom-bar">
+            <div id="slider-progress">
             </div>
         </div>
-
     </div>
 
     <!-- SERVICES -->
@@ -123,7 +116,7 @@
                     </p>
         </section>
 
-        <ul>
+        <ul id="container-tabs">
             <li><button class="btn-tab" id="work" >All Works</button></li>
             <li><button class="btn-tab">Creative</button></li>
             <li><button class="btn-tab">Corporate</button></li>
@@ -289,21 +282,6 @@
         </div>
 
     </div>
-
-    <script>
-
-        const nav = document.getElementById("navbar");
-        const ul = document.getElementById('ul-list');
-
-        const toggleMenu = () => nav.style.display === "flex" ? nav.style.display = "none" : nav.style.display = "flex";
-
-        const atResizing = () => (window.innerWidth >= 1000) ? nav.style.display = "flex" : nav.style.display = "none";
-
-        const closedAfterClick = () => nav.style.display = "none";
-
-        window.onresize = atResizing;
-
-    </script>
 
 </body>
 

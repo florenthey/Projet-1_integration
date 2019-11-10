@@ -7,8 +7,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    background-color: white;
+    background-color: var(--web-agency-white);
 }
+
+:root {
+    --web-agency-blue: #5cacd2;
+    --web-agency-white: white;
+}
+
 
 p {
     font-size: 1em;
@@ -49,11 +55,11 @@ hr {
   hr:before {
     content: "";
     position: absolute;
-    border: 5px solid white;
+    border: 5px solid var(--web-agency-white);
     border-radius: 100%;
     height: 15px;
     width: 15px;
-    background: #5cacd2;
+    background: var(--web-agency-blue);
     transform: translate(-12px, -50%);
   }
 
@@ -62,12 +68,12 @@ hr {
 }
 
 .button-style {
-    background-color: #5cacd2;
+    background-color: var(--web-agency-blue);
     border: none;
 	border-radius: 4px;
-	border-bottom: 3px solid #4493ba;
+	border-bottom: 3px solid var(--web-agency-blue);
     padding: 10px 15px 10px 15px;
-    color: white;
+    color: var(--web-agency-white);
     width: 150px;
     height: 50px;
     cursor: pointer;
@@ -85,7 +91,7 @@ hr {
 
 /* HEADER */
 header {
-    background-color: white;
+    background-color: var(--web-agency-white);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -94,7 +100,7 @@ header {
     width: 100%;
     height: 100px;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     top: 0;
 }
 
@@ -120,7 +126,7 @@ header a {
 
 header a:hover {
     color: black;
-    border-top: 3px solid #5cacd2;
+    border-top: 3px solid var(--web-agency-blue);
 }
 
 .hamburger-icon {
@@ -160,7 +166,7 @@ header button {
     }
 
     header li:hover {
-        background: #5cacd2;
+        background: var(--web-agency-blue);
         width: 100%;
     }
 
@@ -171,7 +177,7 @@ header button {
     }
     header a:hover {
         border-top: none;
-        color: white;
+        color: var(--web-agency-white);
     }
 
     header img {
@@ -191,7 +197,7 @@ header button {
     }
 
     .hamburger-icon:hover {
-        color: #5cacd2;
+        color: var(--web-agency-blue);
     }
 
     #navbar {
@@ -259,13 +265,13 @@ header button {
 }
 
 .fa-angle-left {
-	color: white;
+	color: var(--web-agency-white);
 	margin-top: 0px;
 	margin-left: -7px;
 }
 
 .fa-angle-right {
-	color: white;
+	color: var(--web-agency-white);
 	margin-top: 0px;
 	margin-left: 7px;
 }
@@ -273,26 +279,26 @@ header button {
 #slider-content {
     position: absolute;
     font-family: "robotobold", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: white;
+    color: var(--web-agency-white);
     width: 600px;
 	top: 40%;
 	left: 10%;
 }
 
 #slider-content-title-blue {
-    color: #5cacd2;
+    color: var(--web-agency-blue);
 }
 
 #slider-content-slogan {
     font-size: 0.9em;
     padding-bottom: 30px;
-    color: white;
+    color: var(--web-agency-white);
 }
 
 #button-info {
 	width: 100px;
 	text-align: center;
-	background-color: #5cacd2;
+	background-color: var(--web-agency-blue);
 	border-radius: 4px;
 	border-bottom: 3px solid #4493ba;
 	padding: 10px 15px 10px 15px;
@@ -300,7 +306,7 @@ header button {
 
 #button-info a {
 	text-decoration: none;
-	color: white;
+	color: var(--web-agency-white);
 	font-size: 1.2em;
 	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
@@ -318,7 +324,7 @@ header button {
     bottom: 0;
     width: 20vh;
 	height: 100%;
-	background-color: #5cacd2;
+	background-color: var(--web-agency-blue);
 }
 
 @media screen and (max-width: 1000px) {
@@ -411,15 +417,15 @@ header button {
     height: 12px;
 	width: 12px;
 	border-radius: 100%;
-	border: 3px solid white;
+	border: 3px solid var(--web-agency-white);
 	position: absolute;
-	background: #5cacd2;
+	background: var(--web-agency-blue);
 	margin-top: 20px;
 	margin-left: 50px;
 }
 
 .services-row-pictos span {
-    color: #5cacd2;
+    color: var(--web-agency-blue);
 	padding-top: 18px;
 	padding-left: 17px;
 }
@@ -522,12 +528,13 @@ header button {
 }
 
 #projets button:hover {
-    color: white;
-    background: #5cacd2;
+    color: var(--web-agency-white);
+    background: var(--web-agency-blue);
     height: 50px;
     width: 100px;
     border-bottom: 3px solid #468bac;
 }
+
 
 #work {
     border-radius: 5px 0 0 5px;
@@ -591,7 +598,7 @@ figure {
 figcaption {
     display: flex;
     background-color:rgba(0, 0, 0, 0.6);
-    color: white;
+    color: var(--web-agency-white);
     position: absolute;
     bottom: 0px;
     opacity: 0;
@@ -612,23 +619,23 @@ figcaption .fa-eye {
 	top: -5px;
     left: 208px;
     font-size: 15px;
-    color: white;
+    color: var(--web-agency-white);
 }
 
 figcaption::before {
     content: "";
     border-radius: 100%;
-    border: 2px solid white;
+    border: 2px solid var(--web-agency-white);
     position: absolute;
     height: 50px;
     width: 50px;
-    background: #5cacd2;
+    background: var(--web-agency-blue);
     top: -22px;
     right: 24px;
 }
 
 figcaption p, h3 {
-    color: white;
+    color: var(--web-agency-white);
     margin: 10px 10px;
 }
 
@@ -664,6 +671,14 @@ figure:hover figcaption {
         border-radius: 5px;
     }
 
+    #work {
+        border-radius: 0;
+    }
+    
+    #portfolio {
+        border-radius: 0;
+    }
+ 
 
     #projets-grid {
         display: flex;
@@ -791,7 +806,7 @@ textarea {
 
 /* #submit-button a {
 	text-decoration: none;
-	color: white;
+	color: var(--web-agency-white);
 	font-size: 1.2em;
     font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 } */
