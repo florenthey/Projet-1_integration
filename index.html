@@ -17,12 +17,12 @@
     <header>
             
         <img src="assets/logo.png" alt="Logo de l'entreprise Web Agency">
-            <button class="hamburger-icon" onclick="toggleMenu()">
+            <button class="hamburger-icon">
                 <i class="fas fa-bars"></i>
             </button>
           
             <nav id="navbar">
-                <ul id="ul-list" onclick="closedAfterClick()">
+                <ul id="ul-list">
                     <li><a href="#slider" title="Retourner à l'accueil de la page">Accueil</a></li>
                     <li><a href="#services" title="Aller à la section Services">Services</a></li>
                     <li><a href="#projets" title="Aller à la section Portfolio">Portfolio</a></li>
@@ -116,11 +116,11 @@
                     </p>
         </section>
 
-        <ul id="container-tabs">
-            <li><button class="btn-tab" id="work" >All Works</button></li>
-            <li><button class="btn-tab">Creative</button></li>
-            <li><button class="btn-tab">Corporate</button></li>
-            <li><button class="btn-tab" id="portfolio" >Portfolio</button></li>
+        <ul class="container-tabs">
+            <li class="btn-tab active"><button >All Works</button></li>
+            <li class="btn-tab"><button>Creative</button></li>
+            <li class="btn-tab"><button>Corporate</button></li>
+            <li class="btn-tab"><button>Portfolio</button></li>
         </ul>
         
         <section id="projets-grid">
