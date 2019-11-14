@@ -194,7 +194,7 @@ header button {
         color: #5cacd2;
     }
 
-    #navbar {
+    .navbar {
         display: none;
         position: fixed;
         justify-content: space-around;
@@ -224,13 +224,13 @@ header button {
     height: auto;
 }
 
-#slider-images {
+.slider-images {
     width: 100%;
     position: relative;
     box-sizing: border-box;
 }
 
-#button-right {
+.button-right {
 	position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -244,7 +244,7 @@ header button {
     border: 0;
 }
 
-#button-left {
+.button-left {
 	position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -270,7 +270,7 @@ header button {
 	margin-left: 7px;
 }
 
-#slider-content {
+.slider-content {
     position: absolute;
     font-family: "robotobold", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: white;
@@ -279,17 +279,17 @@ header button {
 	left: 10%;
 }
 
-#slider-content-title-blue {
+.slider-content-title-blue {
     color: #5cacd2;
 }
 
-#slider-content-slogan {
+.slider-content-slogan {
     font-size: 0.9em;
     padding-bottom: 30px;
     color: white;
 }
 
-#button-info {
+.button-info {
 	width: 100px;
 	text-align: center;
 	background-color: #5cacd2;
@@ -298,14 +298,14 @@ header button {
 	padding: 10px 15px 10px 15px;
 }
 
-#button-info a {
+.button-info a {
 	text-decoration: none;
 	color: white;
 	font-size: 1.2em;
 	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-#slider-bottom-bar {
+.slider-bottom-bar {
     position: absolute;
     bottom: 0;
 	width: 100%;
@@ -313,7 +313,7 @@ header button {
     background-color: rgba(0,0,0,0.1);
 }
 
-#slider-progress {
+.slider-progress {
     position: absolute;
     bottom: 0;
     width: 20vh;
@@ -323,15 +323,15 @@ header button {
 
 @media screen and (max-width: 1000px) {
 
-    #slider-images {
+    .slider-images {
         display: none;
     }
 
-    #slider-bottom-bar {
+    .slider-bottom-bar {
         display: none;
     }
 
-    #slider-content {
+    .slider-content {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -343,12 +343,12 @@ header button {
         top: 0;
     }
 
-    #slider-content h1, #slider-content p {
+    .slider-content h1, .slider-content p {
         color: black;
         margin: 5px;
     }
 
-    #slider-content a {
+    .slider-content a {
         display: none;
     }
 }
@@ -365,24 +365,24 @@ header button {
     padding-bottom: 100px;
 }
 
-#services-content {
+.services-content {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
 }
 
-#services-image {
+.services-image {
     box-sizing: border-box;
 }
 
-#services-image img {
+.services-image img {
     display: block;
     width: 510px;
     height: 319px;
 }
 
-#services-paragraph {
+.services-paragraph {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -443,7 +443,7 @@ header button {
         padding-top: 50px;
     }
 
-    #services-paragraph {
+    .services-paragraph {
         width: 100%; 
         margin-left: 50px;
     }
@@ -452,12 +452,12 @@ header button {
         margin-top: 20px;
     }
 
-    #services-image img {
+    .services-image img {
         height: auto;
         width: 100%;
     }
 
-    #services-paragraph {
+    .services-paragraph {
         margin-left: -40px;
     }
 
@@ -486,7 +486,6 @@ header button {
 
 #projets {
     padding-bottom: 5px;
-    margin-bottom: 50px;
     background-color: #f5f5f5;
 }
 
@@ -543,14 +542,14 @@ ul.container-tabs li:last-child button {
 	border-color: #468bac transparent transparent transparent;
 }
 
-#projets-grid {
+.projets-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 0;
 }
 
-#projets-row-one {
+.projets-row-one {
 	display: flex;
 	justify-content: center;
 	align-content: space-between;
@@ -558,7 +557,7 @@ ul.container-tabs li:last-child button {
     box-sizing: border-box;
 }
 
-#projets-row-two {
+.projets-row-two {
 	display: flex;
 	justify-content: center;
 	align-content: space-between;
@@ -668,14 +667,14 @@ figure:hover figcaption {
     }
  
 
-    #projets-grid {
+    .projets-grid {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-bottom: 100px;
     }
     
-    #projets-row-one {
+    .projets-row-one {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -683,7 +682,7 @@ figure:hover figcaption {
         flex-wrap: wrap;
     }
 
-    #projets-row-two {
+    .projets-row-two {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -708,7 +707,7 @@ figure:hover figcaption {
     position: relative;
 }
 
-#map {
+.map {
     width: 100%;
 }
 
@@ -716,19 +715,18 @@ iframe {
     border: 0;
 }
 
-#map-filter {
+.map-filter {
     z-index: 1;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 605px;
-    background-color:
-    #5CADD3;
+    background-color: #5CADD3;
     opacity: 0.3;
     pointer-events: none;
 }
 
-#form-container {
+.form-container {
     z-index: 2;
     box-sizing: border-box ;
     position: absolute;
@@ -743,7 +741,7 @@ iframe {
     padding: 20px;
 }
 
-#form-input {
+.form-input {
     box-sizing: border-box;
     width: 100%;
 }
@@ -760,7 +758,7 @@ address {
     margin: 15px 0 15px 0;
 }
 
-#title-agency {
+.title-agency {
     font-weight: bold;
     font-size: 1em;
 }
@@ -792,28 +790,28 @@ textarea {
     padding: 8px 0px 8px 8px;
 }
 
-/* #submit-button a {
+/* .submit-button a {
 	text-decoration: none;
 	color: white;
 	font-size: 1.2em;
     font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 } */
 
-#underline {
+.underline {
     border-bottom: 1px dotted black;
 }
 
 @media screen and (max-width: 1000px) {
 
-    #map {
+    .map {
         display: none;
     }
 
-    #map-filter {
+    .map-filter {
         visibility: hidden;
     }
 
-    #form-container {
+    .form-container {
         box-sizing: border-box ;
         position: initial;
         display: flex;
